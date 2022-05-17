@@ -9,13 +9,14 @@ var debug = require('debug')('apitest:server');
 var http = require('http');
 const https = require('node:https');
 const fs = require('node:fs');
+require('dotenv').config();
 
 /**
  * SSL Certs
  */
 const options = {
-  key: fs.readFileSync('private/certs/key.pem'),
-  cert: fs.readFileSync('private/certs/cert.pem')
+  key: fs.readFileSync(`${process.env.CERTPATH}/key.pem`),
+  cert: fs.readFileSync(`${process.env.CERTPATH}/cert.pem`)
 };
 
 /**
