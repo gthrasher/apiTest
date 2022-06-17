@@ -1,7 +1,40 @@
 doctype html
 html
   head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css')
+  body.mainView
+    nav.navbar.navbar-expand-lg.bg-light.shadow.rounded
+      .container-fluid
+        a.navbar-brand.mb-0.h1(href='#') atko
+        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon 
+        .collapse.navbar-collapse(id='navbarSupportedContent')
+          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+            li.nav-item 
+              a.nav-link.active(aria-current='page', href='#') Home 
+            li.nav-item 
+              a.nav-link(href='#') Link 
+            li.nav-item.dropdown 
+              a.nav-link.dropdown-toggle(href='#', id='navbarDropdown', role='button', data-bs-toggle='dropdown', aria-expanded='false') Dropdown 
+              ul.dropdown-menu(aria-labelledby='navbarDropdown')
+                li
+                  a.dropdown-item(href='#') Action 
+                li
+                  a.dropdown-item(href='#') Another Action 
+                li
+                  hr.dropdown-divider
+                li
+                  a.dropdown-item(href='#') Something else here 
+            li.nav-item 
+              a.nav-link.disabled Disabled 
+            li.nav-item 
+              a.nav-link(href='#') About
+          span.navbar-text.me-2 Username
+          i.bi.bi-person-circle(style='font-size: 2rem; color: cornflowerblue;')
     block content
+    script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js', integrity='sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk', crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js' integrity='sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy' crossorigin='anonymous')

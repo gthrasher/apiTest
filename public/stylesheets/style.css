@@ -6,3 +6,13 @@ body {
 a {
   color: #00B7FF;
 }
+
+.mainView {
+  background: url("../images/till-daling-syXAm1k9Sts-unsplash.jpg") center;
+  /* background-color: red; */
+  background-size: cover;
+}
+
+.rightView {
+  background-color: slategray;
+}

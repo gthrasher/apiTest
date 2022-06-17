@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css')
+  body.mainView
+    section.h-100.loginCard 
+      .container.py-5.h-100
+        .row.d-flex.justify-content-center.align-items-center.h-100 
+          .col-xl-10 
+            .card.rounded-3.text-black.shadow.rounded 
+              .row.g-0 
+                .col-lg-6 
+                  .card-body.p-md-5.mx-md-4 
+                    .text-center 
+                      img(src='../images/atko.png', style='width: 185px')
+                      h4.mt-1.mb-5.pb-1 We are atko
+                    form(action="./logmein")
+                      p Please login to your account 
+                      .form-floating.mb-4 
+                        input.form-control(type='email', id='loginid', placeholder='enter your email address')
+                        label(for='loginid') Username
+                      .form-floating.mb-4
+                        input.form-control(type='password', id='loginpwd', placeholder='enter your password')
+                        label(for='loginpwd') Password
+                      .text-center.pt-1.mb-5.pb1
+                        .d-grid.gap-2.col-6.mx-auto 
+                          button.btn.btn-primary.btn-block.fa-lg.mb-3(type='button') Log in 
+                        a.text-muted(href='#') Forgot password?
+                      .d-flex.align-items-center.justify-content-center.pb-4 
+                        p.mb-0.me-2 Don't have an account?
+                        button.btn.btn-outline-primary(type='button') CREATE NEW
+                .col-lg-6.d-flex.align-items-center.rightView.rounded-end 
+                  .text-white.px-3.py-4.p-md-5.mx-md-4 
+                    h4.mb-4 We are more than just a company 
+                    p.small.mb-0 We are also a unicorn, giraffe, duck-billed platipus and emu.
+    script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js', integrity='sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk', crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js' integrity='sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy' crossorigin='anonymous')
